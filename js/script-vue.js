@@ -29,10 +29,25 @@ new Vue(
                         date: '17-06-2021'
                     }
                 ]
-            }
+          
+            },
+
+            userMessage:'',
         },
+
+        methods: {
+            printMessage:function() {
+                this.myProfile.posts.unshift({
+                    date: '05/07/2021',
+                    text: this.userMessage
+                });
+             this.userMessage = "";
+            },
+            
+        }
     }
 );
+
 //Creazione di un nuovo messaggio
 //Con un click su “CREA” viene pushato un nuovo post nell’array posts, con il testo della textarea.
 //Sviluppare sia in vanilla/es6 che in VueJS
