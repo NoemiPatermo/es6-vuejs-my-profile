@@ -77,8 +77,6 @@ data.myProfile.posts.forEach((post) => {
 
 const buttonHtml = document.querySelector(".send");
 
-
-
 buttonHtml.addEventListener('click', function(){
     const inside = document.getElementsByClassName('inside')[0];
     let currentDate = "05/07/2021";
