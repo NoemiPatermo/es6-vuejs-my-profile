@@ -22,7 +22,8 @@ const data = {
                 text: 'Vi presento il mio amico Mimmo',
                 mediaPath: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Supernerd_%283262512306%29.jpg/1024px-Supernerd_%283262512306%29.jpg',
                 date: '17-06-2021'
-            }
+            },
+            
         ]
     }
 };
@@ -73,3 +74,14 @@ data.myProfile.posts.forEach((post) => {
 //Creazione di un nuovo messaggio
 //Con un click su “CREA” viene pushato un nuovo post nell’array posts, con il testo della textarea.
 //Sviluppare sia in vanilla/es6 che in VueJS
+
+const buttonHtml = document.querySelector(".send");
+
+
+
+buttonHtml.addEventListener('click', function(){
+    const inside = document.getElementsByClassName('inside')
+    console.log(inside[0].value);
+})
+
+
