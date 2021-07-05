@@ -24,7 +24,7 @@
         </div>
 
         <div class="new-post">
-            <textarea v-model="userMessage" placeholder="A cosa stai pensando?"></textarea>
+            <textarea v-model="userMessage" placeholder="A cosa stai pensando?" @keyup.enter="printMessage"></textarea>
             <button @click="printMessage" class="send">CREA</button>
         </div>
 
