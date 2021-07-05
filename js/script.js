@@ -80,8 +80,32 @@ const buttonHtml = document.querySelector(".send");
 
 
 buttonHtml.addEventListener('click', function(){
-    const inside = document.getElementsByClassName('inside')
-    console.log(inside[0].value);
-})
+    const inside = document.getElementsByClassName('inside')[0];
+    let currentDate = "05/07/2021";
+    let newMessage = inside.value;
+    
+     data.myProfile.posts.push({
+         text: newMessage,
+         data: currentDate
+     });
+
+    inside.value = "";
+    let newPost = `
+    <div class="post-details"> 
+        <div class="user-pic">
+            <img src="${data.myProfile.details.pic}" alt="user pic">
+        </div>
+        <div class="details">
+            <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname}</div>
+            <div class="post-date">${currentDate}</div>
+        </div>
+    </div> 
+    <div class="post-text">
+        ${newMessage}
+    </div>
+` 
+    postListHtml.innerHTML += `<div class="post"> ${newPost} </div>`
+});
+
 
 
